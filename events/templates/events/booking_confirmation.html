@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if message %}
+    <p>{{ message }}</p>
+{% else %}
+    <h2>Booking Confirmed</h2>
+    <p>Thank you {{ booking.name }}! Your booking for <strong>{{ booking.event.title }}</strong> is confirmed.</p>
+{% endif %}
+
+<a href="{% url 'event_list' %}">Back to Events</a>
+
+{% endblock %}

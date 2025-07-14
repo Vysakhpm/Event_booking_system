@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Booking</title>
+</head>
+<body>
+    <header>
+        <h1>Event Booking System</h1>
+        {% if next_upcoming_event %}
+            <p>Next Event: {{ next_upcoming_event.title }} on {{ next_upcoming_event.date }}</p>
+        {% endif %}
+        <hr>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
